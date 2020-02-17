@@ -1,3 +1,10 @@
+%1st task
+syms a b x;
+solve(exp(b*x.^2-x) + a == 100,a);
+
+
+
+% 2nd task
 syms x;
 y = x/(sqrt(x^2+1)*(2+x^2));
 yi = int(y,x);
