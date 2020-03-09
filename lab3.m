@@ -1,10 +1,21 @@
+%% 3rd Lab
+%% Creating signal graph
+
+%%
+% Name: Zijian Xie
+%%
+% This is the function of creating diffrent type of signal wave
 function y = lab3(t)
-t = 0:0.01:6.5;
+if nargin == 0
+    t = 0:0.01:6.5;
+end
 t_sawf = (t>=4)&(t<6); t_saw = t(t_sawf);
 t_zerof = (t>=2)&(t<4); t_zero = t(t_zerof);
 t_sinf = (t>=6)&(t<6.5); t_sin = t(t_sinf);
 t_constf = (t>=0)&(t<1.5); t_const = t(t_constf);
 t_noisef = (t>=1.5)&(t<=2); t_noise = t(t_noisef);
+
+% Sine signal
 % t_sin = 6:0.01:6.5;
 A0 = 0; A = 2; f = 1;
 delay = 6;
@@ -42,7 +53,10 @@ if nargout == 0
     plot(t,y)
     y=[];
 end
-
-% Today I learned how to create my own signal graph.
+%% Conclusion:
+% Today I learned how to create my own signal graph with different type of
+% waves, for example, Constant Signal, Zeros, Linear function, Noise,
+% Harmonic
+%%
 % And the test remind me of commands difference between matlab and other programming languages
 % (C, Python etc.). 
